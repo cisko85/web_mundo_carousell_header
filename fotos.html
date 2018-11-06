@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UMARE</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+     <!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/"><!--UMARE-->
+           <img class= "logo-navbar" src="img/logo/logo-navbar-mundo.jpg" style="width: 50%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="fotos.html">Fotos</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">Nosotros</a>
+            </li>
+            <!--generé un id en los íconos de redes sociales por si quiere vincular novedades con las redes<li class="nav-item">
+              <a class="nav-link" href="#novedades">Novedades</a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+         <!-- buscacdor opcional <form class="form-inline my-2 my-lg-0" >
+            <input class="form-control mr-sm-2" placeholder="Search" type="text">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>-->
+        </div>
+       
+      </nav>
+<!-- Galería con boostrap js-->
+<h1 class="text-center display-4 my-5">Galer&iacute;a de im&aacute;genes</h1>
+
+<div class="container">
+  <div class="card-columns" id="galeria"><!--id galeria para variable js-->
+      
+      <!--Esta tarjeta es la que uso en el script--
+        <div class="card">
+          <a href="#" data-toggle="modal" data-target="#exampleModal">
+          <img class="card-img-top" src="img/1.jpg" alt="">
+          </a>      
+         </div>
+        <!-- Modal 
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">   
+          <img src="img/1.jpg" alt="" class="img-fluid rounded">                  
+          </div>
+        </div>
+        <!--fin Modal--> 
+      <!--Fin tarjeta -->   
+  </div>    
+        <script>
+        var imagenes= [1,2,3,4,5,6];
+        var galeria = document.getElementById('galeria');
+        for(imagen of imagenes){
+          galeria.innerHTML += `  
+          <div class="card">
+             <a href="#" data-toggle="modal" data-target="#id${imagen}">
+              <img class="card-img-top" src="img/${imagen}.jpg" alt="">
+             </a>      
+          </div>
+       
+        <div class="modal fade" id="id${imagen}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         
+          <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">   
+          <img src="img/${imagen}.jpg" alt="" class="img-fluid rounded">                  
+          </div>
+        </div>
+        `
+        } 
+        </script>
+  
+</div> 
+
+<!--FOOTER-->
+
+<footer class="footer">
+    <div class="container mt-5 mb-4 text-center text-md-left">
+        <div class="row mt-3">
+    
+            <!--First column-->
+            <div class="col-md-4 col-lg-3 col-xl-3 ">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Ubicaci&oacute;n</strong>
+                </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fa fa-home mr-3"></i> 
+    
+    Billinghurst 362 (C1174ABF) – Almagro <a href="https://www.google.com/maps/place/Casa+Umare/@-34.6061636,-58.4183436,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca8abe20ad7f:0x1c0bc8a1ece1c09e!8m2!3d-34.6061636!4d-58.4161549?hl=es-ES" target="_blank"> ver mapa</a></p>
+    
+    Ciudad Autónoma de Buenos Aires – Argentina
+    </p>
+             
+               
+            </div>
+            <!--/.First column-->
+    
+            <!--Second column-->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" id="contacto">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Contacto</strong>
+                </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fa fa-envelope mr-3"></i> info@ejemplo.com
+                </p>
+                <p>
+                    <i class="fa fa-phone mr-3"></i> 011555-5555
+                </p>
+            </div>
+            <!--/.Second column-->
+    
+            <!--Third column-->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong>Seguinos</strong>
+                </h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="https://www.facebook.com/Casa-Umare-172761762737108/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                
+                  
+                    <a href="https://twitter.com/casaumare" target="_blank"><i class="fab fa-twitter"></i></a>
+              
+                  
+                    <a href="https://www.instagram.com/casaumare/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                          
+                </p>
+            </div>
+            <!--/.Third column-->
+  
+    
+        </div>
+    </div>
+    
+    
+    </footer>
+ 
+<!--boostrap javascript-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
